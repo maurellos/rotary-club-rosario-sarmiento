@@ -1,0 +1,36 @@
+
+
+
+header{
+    height: 100px;
+    box-shadow: 0 2px 5px rgb(0, 0, 0 / 20%);
+    padding: 1rem;
+    position: relative;
+}
+
+.cajaUno{
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    padding: 10px;
+  
+}
+
+.cajados{
+display: flex;
+flex-direction:row;
+width: 100px;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+li{
+    text-decoration: none;
+    
+}
+

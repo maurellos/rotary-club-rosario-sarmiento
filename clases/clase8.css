@@ -1,0 +1,7 @@
+main{
+    border: 1px solid black;
+    margin: 50px;
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(blue, yellow) ;
+}
