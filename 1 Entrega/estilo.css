@@ -49,23 +49,62 @@
     display: flex;
     gap: 1rem;
     margin-right: 3rem;
-   
+    
+
 
 }
+
+.nav__lista li{
+    list-style-type: none;
+    
+}
+
+.nav__lista li a{
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    
+    
+   
+}
+
+/* Color en a*/
 
 .nav__lista li a:hover{
     color: gold;
 
 }
 
+/* subrayado en a (no me funciona)*/
 
-li{
-    list-style-type: none;
+
+.nav_lista li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
-li a{
-    text-decoration: none;
+.nav__lista li a::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    height: 3px;
+    background-color: gold;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0,5s;
+    
+    
+
+
+
 }
+
+
+
+
 
 
 h1{
@@ -80,16 +119,13 @@ h1{
 
 
 
+/*
+
 
 
 
 /*main*/
 
-main{
-   
-
-  
-}
 
 
 
@@ -169,6 +205,17 @@ main{
    object-fit: cover;
 }
 
+.cajaIndex img{
+    width: 100%;
+    transition: all 300;
+    position: relative;
+
+
+}
+
+.cajaIndex img:hover{
+    transform: scale(1.1);
+}
 
 
 /*Proyectos*/
@@ -244,11 +291,107 @@ main{
 .historiaFoto{
     
     text-align: center;
-    
     object-fit: contain;
     margin-left: 5%;
     margin-right: 5%;
+    
+    
 }
+
+
+.historia__cajaGrande{
+    border: 1px solid blue;
+    
+    margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    grid-template-areas:
+    "foto1 blanco d1"
+    "i2 blanco foto2"
+    "foto3 blanco d3"
+    "i4 blanco foto4"
+    "foto5 blanco d5"
+    "i6 blanco foto6";
+    
+}
+
+/*imagenes*/
+
+.historia__fotoIzquierda1{
+    grid-area:foto1;
+}
+
+
+.historia__fotoIzquierda2{
+    grid-area: foto2;
+}
+
+.historia__fotoDerecha1{
+    grid-area: foto3;
+
+}
+
+.historia__fotoDerecha2{
+    grid-area: foto4;
+}
+
+.historia__fotoIzquierda3{
+    grid-area: foto5;
+}
+
+.historia__fotoDerecha3{
+    grid-area: foto6;
+}
+
+
+/*texto*/
+
+.historia__texto1{
+    grid-area: d1;
+    margin-top: 10%;
+    
+}
+
+
+
+.historia__texto2{
+    grid-area: i2;
+    margin-top: 10%;
+}
+
+
+
+.historia__texto3{
+    grid-area: d3;
+    margin-top: 10%;
+
+}
+
+
+.historia__texto4{
+    grid-area: i4;
+    margin-top: 10%;
+}
+
+
+
+
+.historia__texto5{
+    grid-area: d5;
+    margin-top: 10%;
+}
+
+
+
+.historia__texto6{
+    grid-area: i6;
+    margin-top: 10%;
+}
+
+
 
 
 /*socios*/
@@ -279,7 +422,7 @@ table{
 /*footer*/
 
 footer{
-    margin-top: 20%;
+    margin-top: 100%;
 }
 
 .footerLista ul li{
@@ -357,15 +500,19 @@ footer{
     .footer__contenedor{
         flex-direction: column;
         max-width: fit-content;
+        text-align: center;
     }
 
-   
+    .footer__imagen2 img{
+        object-fit: cover;
+        width: 100%;
+    }
+    
       
     
-    
-
   
 }
+
 
 
 /*mobil*/
